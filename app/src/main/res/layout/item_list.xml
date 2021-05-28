@@ -12,23 +12,23 @@
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:padding="8dp"
-        android:textSize="12sp"
+        android:textSize="13sp"
         android:textAllCaps="true"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         tools:text="Delhi" />
 
-    <TextView
-        android:id="@+id/tvCnfmd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:textSize="12sp"
-        android:textAlignment="viewEnd"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        tools:text="0000" />
+<!--    <TextView-->
+<!--        android:id="@+id/tvCnfmd"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:padding="8dp"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textAlignment="viewEnd"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:text="0000" />-->
 
     <TextView
         android:id="@+id/tvActv"
@@ -38,33 +38,32 @@
         android:padding="8dp"
         android:textAlignment="viewEnd"
         android:textAllCaps="true"
-        android:textSize="12sp"
+        android:textSize="13sp"
         android:textStyle="bold"
         tools:text="0000" />
 
-    <TextView
-        android:id="@+id/tvRcvrd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:textAlignment="viewEnd"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textSize="12sp"
-        tools:text="0000" />
+<!--    <TextView-->
+<!--        android:id="@+id/tvRcvrd"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:padding="8dp"-->
+<!--        android:textAlignment="viewEnd"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="12sp"-->
+<!--        tools:text="0000" />-->
 
-    <TextView
-        android:id="@+id/tvDcsd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:textAlignment="viewEnd"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textSize="12sp"
-        tools:text="0000" />
-
+<!--    <TextView-->
+<!--        android:id="@+id/tvDcsd"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:padding="8dp"-->
+<!--        android:textAlignment="viewEnd"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="12sp"-->
+<!--        tools:text="0000" />-->
 
 </LinearLayout>

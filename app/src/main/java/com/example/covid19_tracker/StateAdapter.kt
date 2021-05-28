@@ -21,10 +21,10 @@ class StateAdapter(val list: List<StatewiseItem>) : BaseAdapter() {
 
         // Populate the views in list
         view.tvState.text = item.state
-        view.tvCnfmd.text = item.confirmed
+//        view.tvCnfmd.text = item.confirmed
         view.tvActv.text = item.active
-        view.tvRcvrd.text = item.recovered
-        view.tvDcsd.text = item.deaths
+//        view.tvRcvrd.text = item.recovered
+//        view.tvDcsd.text = item.deaths
         return view
     }
 }

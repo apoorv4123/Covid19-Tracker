@@ -190,8 +190,15 @@
 
             </LinearLayout>
 
-
         </LinearLayout>
+
+        <com.leo.simplearcloader.SimpleArcLoader
+            android:id="@+id/loader"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:arc_style="simple_arc"/>
 
         <ListView
             android:id="@+id/list"
@@ -201,5 +208,6 @@
             android:layout_marginBottom="16dp"
             tools:listheader="@layout/list_header"
             tools:listitem="@layout/item_list" />
+
     </RelativeLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

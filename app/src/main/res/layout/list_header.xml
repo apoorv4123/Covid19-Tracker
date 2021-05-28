@@ -11,19 +11,20 @@
         android:padding="8dp"
         android:text="state/ut"
         android:textAllCaps="true"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:text="cnfmd"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/dark_red"
-        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:padding="8dp"-->
+<!--        android:text="cnfmd"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/dark_red"-->
+<!--        android:textStyle="bold" />-->
 
     <TextView
         android:layout_width="0dp"
@@ -31,32 +32,32 @@
         android:layout_weight="1"
         android:fontFamily="@font/coming_soon"
         android:padding="8dp"
-        android:text="actv"
+        android:text="active cases"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/dark_blue"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:text="rcvrd"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/dark_green"
-        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:padding="8dp"-->
+<!--        android:text="rcvrd"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/dark_green"-->
+<!--        android:textStyle="bold" />-->
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:text="dcsd"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/dark_yellow"
-        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:padding="8dp"-->
+<!--        android:text="dcsd"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/dark_yellow"-->
+<!--        android:textStyle="bold" />-->
 
 </LinearLayout>

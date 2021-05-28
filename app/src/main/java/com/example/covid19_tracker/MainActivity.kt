@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.AbsListView
 import androidx.core.view.get
 import androidx.work.*
@@ -24,7 +25,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         list.addHeaderView(LayoutInflater.from(this).inflate(R.layout.list_header, list, false))
 
+        // to start simple arc loader
+        loader.start()
+
         fetchResults()
+        loader.stop()
+        loader.visibility = View.GONE
+
         swipeToRefresh.setOnRefreshListener {
             fetchResults()
         }

@@ -1,5 +1,6 @@
 package com.example.covid19_tracker
 
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -9,6 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.eazegraph.lib.models.PieModel
 
 val states = arrayOf(
     State("TT", R.drawable.ind),
@@ -65,18 +67,48 @@ class StateActivity : AppCompatActivity() {
     private fun fetchResults(position: Int) {
         GlobalScope.launch(Dispatchers.Main) {
 //            if(!Client.api.isExecuted())
-            Client.api.cancel()
-            val response = withContext(Dispatchers.IO) { Client.api.execute() }
+//            Client.api.cancel()
+            val response = withContext(Dispatchers.IO) { Client.api.clone().execute() }
             if (response.isSuccessful) {
                 val data = Gson().fromJson(response.body?.string(), Response::class.java)
 
                 data.let {
-                    toolBar.title = it.statewise[position].active
+                    toolBar.title = it.statewise[position].state
 
                     tvActvState.text = it.statewise[position].active
-                    tvActvState.text = it.statewise[position].active
-                    tvActvState.text = it.statewise[position].active
-                    tvActvState.text = it.statewise[position].active
+                    tvConfState.text = it.statewise[position].confirmed
+                    tvRcvrdState.text = it.statewise[position].recovered
+                    tvDcsdState.text = it.statewise[position].deaths
+
+                    pieChart.addPieSlice(
+                        PieModel(
+                            "Confirmed",
+                            Integer.parseInt(tvConfState.text.toString()).toFloat(),
+                            R.color.dark_red
+                        )
+                    )
+                    pieChart.addPieSlice(
+                        PieModel(
+                            "Active",
+                            Integer.parseInt(tvActvState.text.toString()).toFloat(),
+                            R.color.dark_blue
+                        )
+                    )
+                    pieChart.addPieSlice(
+                        PieModel(
+                            "Recovered",
+                            Integer.parseInt(tvRcvrdState.text.toString()).toFloat(),
+                            R.color.dark_green
+                        )
+                    )
+                    pieChart.addPieSlice(
+                        PieModel(
+                            "Deceased",
+                            Integer.parseInt(tvDcsdState.text.toString()).toFloat(),
+                            R.color.dark_yellow
+                        )
+                    )
+                    pieChart.startAnimation()
                 }
             }
         }
