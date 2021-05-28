@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        app:titleTextColor="@color/dark_green" />
+        app:titleTextColor="@color/white" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -163,7 +163,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:paddingTop="60dp">
+        android:paddingTop="30dp">
 
         <LinearLayout
             android:layout_width="0dp"

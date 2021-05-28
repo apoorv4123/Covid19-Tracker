@@ -1,5 +1,6 @@
 package com.example.covid19_tracker
 
+import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -59,7 +60,13 @@ class StateActivity : AppCompatActivity() {
         setContentView(R.layout.activity_state)
 
         val position = intent.getIntExtra("SID", 0)
-        Toast.makeText(this, "$position", Toast.LENGTH_SHORT).show()
+
+        // Set up back button in toolbar
+        toolBar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
+        toolBar.setNavigationOnClickListener {
+            finish()
+        }
+
         ivState.setImageResource(states[position].mapId)
         fetchResults(position)
     }
@@ -84,28 +91,28 @@ class StateActivity : AppCompatActivity() {
                         PieModel(
                             "Confirmed",
                             Integer.parseInt(tvConfState.text.toString()).toFloat(),
-                            R.color.dark_red
+                            Color.parseColor("#D32F2F")
                         )
                     )
                     pieChart.addPieSlice(
                         PieModel(
                             "Active",
                             Integer.parseInt(tvActvState.text.toString()).toFloat(),
-                            R.color.dark_blue
+                            Color.parseColor("#1976D2")
                         )
                     )
                     pieChart.addPieSlice(
                         PieModel(
                             "Recovered",
                             Integer.parseInt(tvRcvrdState.text.toString()).toFloat(),
-                            R.color.dark_green
+                            Color.parseColor("#388E3C")
                         )
                     )
                     pieChart.addPieSlice(
                         PieModel(
                             "Deceased",
                             Integer.parseInt(tvDcsdState.text.toString()).toFloat(),
-                            R.color.dark_yellow
+                            Color.parseColor("#FBC02D")
                         )
                     )
                     pieChart.startAnimation()

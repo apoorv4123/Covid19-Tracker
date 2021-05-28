@@ -26,11 +26,13 @@ class MainActivity : AppCompatActivity() {
         list.addHeaderView(LayoutInflater.from(this).inflate(R.layout.list_header, list, false))
 
         // to start simple arc loader
-        loader.start()
+//        loader.start()
+        pBar.visibility = View.VISIBLE
 
         fetchResults()
-        loader.stop()
-        loader.visibility = View.GONE
+        pBar.visibility = View.GONE
+//        loader.stop()
+//        loader.visibility = View.GONE
 
         swipeToRefresh.setOnRefreshListener {
             fetchResults()
@@ -63,7 +65,13 @@ class MainActivity : AppCompatActivity() {
     private fun fetchResults() {
 // GlobalScope se coroutines ka global scope start ho jata hai
         GlobalScope.launch {
-            val response = withContext(Dispatchers.IO) { Client.api.execute() }
+            val response = withContext(Dispatchers.IO) {
+                if (!Client.api.isExecuted()) {
+                    Client.api.execute()
+                } else {
+                    Client.api.clone().execute()
+                }
+            }
 // This is the network call. It'll return you json object. Your task is to parse it.
             if (response.isSuccessful) {
 //                Log.i("info", response.body?.string()!!)

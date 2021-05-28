@@ -192,13 +192,21 @@
 
         </LinearLayout>
 
-        <com.leo.simplearcloader.SimpleArcLoader
-            android:id="@+id/loader"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+<!--        <com.leo.simplearcloader.SimpleArcLoader-->
+<!--            android:id="@+id/loader"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:visibility="visible"-->
+<!--            app:arc_style="simple_arc"/>-->
+
+        <ProgressBar
+            android:id="@+id/pBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:visibility="visible"
-            app:arc_style="simple_arc"/>
+            android:visibility="gone"/>
 
         <ListView
             android:id="@+id/list"
